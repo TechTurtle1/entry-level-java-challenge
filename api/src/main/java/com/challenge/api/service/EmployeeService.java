@@ -3,6 +3,7 @@ package com.challenge.api.service;
 import com.challenge.api.model.Employee;
 import com.challenge.api.repository.EmployeeRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,9 @@ public class EmployeeService {
     public Employee createNewEmployee(Object requestBody) {
         // Create a new ObjectMapper that will attempt to convert the Object into an Employee.
         ObjectMapper objectMapper = new ObjectMapper();
+        // Create a new JavaTimeModule that will assist with the deserialization and serialization of Instant objects
+        JavaTimeModule timeModule = new JavaTimeModule();
+        objectMapper.registerModule(timeModule);
         try {
             Employee employee = objectMapper.convertValue(requestBody, Employee.class);
             // The employee's UUID cannot be null when in the repository. Generate a new UUID before insertion.
