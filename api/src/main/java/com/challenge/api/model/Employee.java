@@ -143,7 +143,7 @@ public class Employee implements EmployeeInterface {
     }
 
     public void setContractHireDate(Instant date) {
-        this.contractHireDate = contractHireDate;
+        this.contractHireDate = date;
     }
 
     public Instant getContractTerminationDate() {
@@ -151,6 +151,6 @@ public class Employee implements EmployeeInterface {
     }
 
     public void setContractTerminationDate(Instant date) {
-        this.contractTerminationDate = contractTerminationDate;
+        this.contractTerminationDate = date;
     }
 }
