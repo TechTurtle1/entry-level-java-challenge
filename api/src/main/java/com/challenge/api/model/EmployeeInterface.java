@@ -4,16 +4,9 @@ import java.time.Instant;
 import java.util.UUID;
 
 /**
- * Every abstraction of an Employee should, at the bare minimum, implement this interface. Consider this a binding
- * contract for the domain model of an Employee.
- */
-/**
  * Represents an abstraction of an Employee.
  *
  * This class provides a contract for the domain model of an Employee. It includes the getter/setter methods
- *
- * @author George Wu
- * @version 1.0
  */
 public interface EmployeeInterface {
 

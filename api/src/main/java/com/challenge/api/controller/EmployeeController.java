@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
  * This controller handles HTTP requests related to Employee entities. Some operations include
  * retrieving all employees, retrieving an employee with a specified ID, or creating a new employee.
  * It also provides an EmployeeService object that handles the business logic in the Service layer.
- *
- * @author George Wu
- * @version 1.0
  */
 @RestController
 @RequestMapping("/api/v1/employee")

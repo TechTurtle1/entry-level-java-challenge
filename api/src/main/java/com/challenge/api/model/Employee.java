@@ -11,9 +11,6 @@ import java.util.UUID;
  *
  * This class provides the above properties of an Employee, including getter/setter methods. This class also implements
  * the EmployeeInterface interface.
- *
- * @author George Wu
- * @version 1.0
  */
 @Entity
 public class Employee implements EmployeeInterface {

@@ -14,9 +14,6 @@ import org.springframework.stereotype.Service;
  * This service layer handles the business logic related to Employees. Some operations include
  * retrieving all employees, retrieving an employee with a specified ID, or creating a new employee.
  * It also provides an EmployeeRepository object that handles data persistence.
- *
- * @author George Wu
- * @version 1.0
  */
 @Service
 public class EmployeeService {
