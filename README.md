@@ -56,7 +56,12 @@ The spotless plugin will also execute check-and-validation tasks as part of the 
 ## How to run
 
 Local Server: http://localhost:8080
+
 Request Mapping: /api/v1/employee
+
 getAllEmployees(): GET /api/v1/employee/employees
+
 getEmployeeByUuid(): GET /api/v1/employee/employees/{uuid}
+
 createEmployee(): POST /api/v1/employee/employees
+
