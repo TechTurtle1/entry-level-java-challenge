@@ -9,7 +9,7 @@ getEmployeeByUuid(UUID uuid): Gets an employee by their unique UUID.
 
 createEmployee(Object requestbody): Attempts to create a new Employee object with an object in JSON format passed into the function.
 
-## How to run (Postman)
+## How to Run (Postman)
 
 Run the **EntryLevelJavaChallengeApplication.java** on **IntelliJ** or another IDE that supports Java. Then, open **Postman**. If you have an account, navigate to "Send an API Request" and click on the button next to it. You can change the HTTP method (GET/POST/PUT/DELETE) and enter the url. They are shown below:
 
@@ -45,3 +45,14 @@ Here is the Employee object I used in testing:
   "contractTerminationDate": null
 }
 ```
+
+## Assumptions
+
+Some assumptions will have to be made regarding the creation of an Employee and whether or not certain fields will be automatically be filled:
+
+- All Employees need a UUID.
+
+- The Employee's full name might not only be their first and last name together. A person may have a prefix, such as "Dr.", a suffix, such as "Sr.", and/or a middle name.
+
+- The time that an Employee is added to the database might not be the date and time their contract started. They may have been hired earlier than the date and time their data was entered into the database.
+
