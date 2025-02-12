@@ -1,67 +1,47 @@
-# ReliaQuest's Entry-Level Java Challenge
+## George Wu's solution for the ReliaQuest Entry Level Java Challenge
+This is my solution for the ReliaQuest Entry Level Java Challenge. I have created three REST API endpoints, a service layer, a controller layer, and a repository layer.
 
-Please keep the following in mind while working on this challenge:
-* Code implementations will not be graded for **correctness** but rather on practicality
-* Articulate clear and concise design methodologies, if necessary
-* Use clean coding etiquette
-  * E.g. avoid liberal use of new-lines, odd variable and method names, random indentation, etc...
-* Test cases are not required
+## Endpoint Functions:
 
-## Problem Statement
+getAllEmployees(): Gets all of the employee objects inside of the repository.
 
-Your employer has recently purchased a license to top-tier SaaS platform, Employees-R-US, to off-load all employee management responsibilities.
-Unfortunately, your company's product has an existing employee management solution that is tightly coupled to other services and therefore 
-cannot be replaced whole-cloth. Product and Development leads in your department have decided it would be best to interface
-the existing employee management solution with the commercial offering from Employees-R-US for the time being until all employees can be
-migrated to the new SaaS platform.
+getEmployeeByUuid(UUID uuid): Gets an employee by their unique UUID.
 
-Your ask is to expose employee information as a protected, secure REST API for consumption by Employees-R-US web hooks.
-The initial REST API will consist of 3 endpoints, listed in the following section. If for any reason the implementation 
-of an endpoint is problematic, the team lead will accept **pseudo-code** and a pertinent description (e.g. java-doc) of intent.
+createEmployee(Object requestbody): Attempts to create a new Employee object with an object in JSON format passed into the function.
 
-Good luck!
+## How to run (Postman)
 
-## Endpoints to implement (API module)
+Run the **EntryLevelJavaChallengeApplication.java** on **IntelliJ** or another IDE that supports Java. Then, open **Postman**. If you have an account, navigate to "Send an API Request" and click on the button next to it. You can change the HTTP method (GET/POST/PUT/DELETE) and enter the url. They are shown below:
 
-_See `com.challenge.api.controller.EmployeeController` for details._
-
-getAllEmployees()
-
-    output - list of employees
-    description - this should return all employees, unfiltered
-
-getEmployeeByUuid(...)
-
-    path variable - employee UUID
-    output - employee
-    description - this should return a single employee based on the provided employee UUID
-
-createEmployee(...)
-
-    request body - attributes necessary to create an employee
-    output - employee
-    description - this should return a single employee, if created, otherwise error
-
-## Code Formatting
-
-This project utilizes Gradle plugin [Diffplug Spotless](https://github.com/diffplug/spotless/tree/main/plugin-gradle) to enforce format
-and style guidelines with every build.
-
-To format code according to style guidelines, you can run **spotlessApply** task.
-`./gradlew spotlessApply`
-
-The spotless plugin will also execute check-and-validation tasks as part of the gradle **build** task.
-`./gradlew build`
-
-## How to run
-
+```
 Local Server: http://localhost:8080
 
 Request Mapping: /api/v1/employee
 
-getAllEmployees(): GET /api/v1/employee/employees
+Base URL: http://localhost:8080/api/v1/employee
 
-getEmployeeByUuid(): GET /api/v1/employee/employees/{uuid}
+getAllEmployees(): GET http://localhost:8080/api/v1/employee/employees
 
-createEmployee(): POST /api/v1/employee/employees
+getEmployeeByUuid(): GET http://localhost:8080/api/v1/employee/employees/{uuid}
 
+createEmployee(): POST http://localhost:8080/api/v1/employee/employees
+```
+
+## Testing
+
+Here is the Employee object I used in testing:
+
+```
+{
+  "uuid": "123e4567-e89b-12d3-a456-426614174000",
+  "firstName": "Jon",
+  "lastName": "Doe",
+  "fullName": "Jon Doe",
+  "salary": 150000,
+  "age": 45,
+  "jobTitle": "Senior Software Engineer",
+  "email": "jon.doe@work.com",
+  "contractHireDate": "2023-01-15T08:00:00Z",
+  "contractTerminationDate": null
+}
+```
