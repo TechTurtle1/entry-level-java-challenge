@@ -1,5 +1,5 @@
-## George Wu's solution for the ReliaQuest Entry Level Java Challenge
-This is my solution for the ReliaQuest Entry Level Java Challenge. I have created three REST API endpoints, a service layer, a controller layer, and a repository layer.
+## George Wu's solution for Java Challenge
+This is my solution for Java Challenge. I have created three REST API endpoints, a service layer, a controller layer, and a repository layer.
 
 ## Endpoint Functions:
 
